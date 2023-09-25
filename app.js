@@ -64,7 +64,7 @@ const showWinner = (winner, computerChoice) => {
     result.innerHTML = `
     <h1 class="text-win">You Win</h1>
     <i id="rock" class="choice fas fa-hand-${computerChoice} fa-10x"></i>
-    <p>computer chose <strong>${computerChoice}</strong></p>
+    <p>computer choose <strong>${computerChoice.charAt(0).toUpperCase()+computerChoice.slice(1)}</strong></p>
     `
     } else if(winner === "computer") {
         //increase by score
@@ -75,13 +75,13 @@ const showWinner = (winner, computerChoice) => {
         result.innerHTML = `
         <h1 class="text-win">You Lose</h1>
         <i id="paper" class="choice fas fa-hand-${computerChoice} fa-10x"></i>
-        <p>computer chose <strong>${computerChoice}</strong></p>
+        <p>computer chose <strong>${computerChoice.charAt(0).toUpperCase()+computerChoice.slice(1)}</strong></p>
         `
     } else{
         result.innerHTML = `
         <h1>its a draw</h1>
         <i id="scissors" class="choice fas fa-hand-${computerChoice} fa-10x"></i>
-        <p>computer chose <strong>${computerChoice}</strong></p>
+        <p>computer chose <strong>${computerChoice.charAt(0).toUpperCase()+computerChoice.slice(1)}</strong></p>
         `
     }
 
